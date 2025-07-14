@@ -1,0 +1,126 @@
+.home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(to right, #fefce8, #fef9c3); */
+  background-color: #FFF8F3;
+  text-align: left;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 2rem;
+}
+
+.home-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.home-text h1 {
+  font-size: 3rem;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+.home-text p {
+  color: #334155;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.scroll-button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #1e40af;
+  color: white;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-button:hover {
+  background-color: #1d4ed8;
+}
+
+.home-svg-wrapper {
+  flex: 1;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-svg {
+  width: 100%;
+  height: auto;
+  max-height: 140vh;
+  mix-blend-mode: multiply;
+  opacity: 0.95;
+  overflow: visible;
+}
+
+.leftcloud {
+  animation: floatLeft 8s ease-in-out infinite;
+}
+
+.rightcloud {
+  animation: floatRight 9s ease-in-out infinite;
+}
+
+@keyframes floatLeft {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(15px, -20px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes floatRight {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(-15px, -15px); }
+  100% { transform: translate(0, 0); }
+}
+
+.student {
+  animation: bounceChar 4s ease-in-out infinite;
+}
+
+@keyframes bounceChar {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+
+.cap {
+  animation: tossCap 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes tossCap {
+  0%   { transform: translateY(0) rotate(0deg); }
+  50%  { transform: translateY(-10px) rotate(-8deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+.stairs {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawStairs 3s ease forwards;
+}
+
+@keyframes drawStairs {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

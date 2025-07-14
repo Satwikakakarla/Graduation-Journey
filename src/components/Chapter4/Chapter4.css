@@ -1,0 +1,193 @@
+/* Chapter4.css */
+
+.chapter4 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: linear-gradient(to right, #f0f4ff, #e8ecfc); */
+  background: linear-gradient(to right, #ede9fe, #ffffff);
+
+  scroll-snap-align: start;
+  padding: 5rem 2rem;
+}
+
+.chapter4-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.chapter4 .text {
+  flex: 1;
+  max-width: 550px;
+  color: #1e293b;
+}
+
+.chapter4 .text h2 {
+  font-size: 1.25rem;
+  color: #6366f1;
+  margin-bottom: 0.5rem;
+}
+
+.chapter4 .text h1 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.chapter4 .text p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #475569;
+}
+
+.chapter4 .illustration {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.graduation-svg-wrapper {
+  width: 100%;
+  max-width: 600px; /* Adjust based on design */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.graduation-svg {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  animation: floatUp 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-12px);
+  }
+}
+
+
+.sparkle {
+  animation: twinkle 2s ease-in-out infinite;
+  transform-origin: center;
+  opacity: 0.8;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+
+/* Add staggered delays for a magical effect */
+.sparkle-1 { animation-delay: 0s; }
+.sparkle-2 { animation-delay: 0.3s; }
+.sparkle-3 { animation-delay: 0.6s; }
+.sparkle-4 { animation-delay: 0.9s; }
+.sparkle-5 { animation-delay: 1.2s; }
+.sparkle-6 { animation-delay: 1.5s; }
+
+/* Add more as needed */
+
+.tassel {
+  transform-origin: top center; /* adjust based on SVG structure */
+  animation: tasselSway 4s ease-in-out infinite;
+}
+
+@keyframes tasselSway {
+  0%   { transform: rotate(0deg); }
+  50%  { transform: rotate(1.5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
+
+.diploma-arm {
+  animation: armLift 8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes armLift {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px); /* slight upward lift */
+  }
+}
+
+
+.orbiter {
+  transform-origin: right;
+  opacity: 0;
+}
+.animate-orbit .orbiter {
+  animation: flyOrbit 2s ease-out forwards;
+}
+
+
+@keyframes flyOrbit {
+  0% {
+    transform: rotate(0deg) translate(150px) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(180deg) translate(30px) rotate(-180deg);
+    opacity: 1;
+  }
+}
+
+.orbiter2 {
+  transform-origin: left;
+  opacity: 0;
+}
+.animate-orbit .orbiter2 {
+  animation: flyOrbit2 2s ease-out forwards;
+}
+
+
+@keyframes flyOrbit2 {
+  0% {
+    transform: rotate(180deg) translate(150px) rotate(-180deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg) translate(30px) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.animate-orbit .star {
+  animation: fillGold 0.8s ease-in forwards;
+  animation-delay: 1.5s; /* Start after orbit finishes */
+}
+
+.animate-orbit .aplus {
+  animation: fillGold 0.8s ease-in forwards;
+  animation-delay: 1.5s; /* Start after orbit finishes */
+}
+@keyframes fillGold {
+  0% {
+    fill: #ffffff;
+  }
+  100% {
+    fill: #FFEB3B;
+  }
+}
+

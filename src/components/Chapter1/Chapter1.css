@@ -1,0 +1,45 @@
+.chapter1 {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 230, 222);
+  padding: 4rem 2rem;
+  overflow: hidden;
+}
+
+.chapter1-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 2rem;
+}
+
+.chapter1-text {
+  flex: 1;
+  max-width: 50%;
+  color: #2d3748;
+}
+
+.chapter1-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.chapter1-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.chapter1-svg {
+  flex: 1;
+  max-width: 50%;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

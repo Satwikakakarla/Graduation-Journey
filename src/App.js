@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Home from "./components/Home/Home";
+import Chapter1 from "./components/Chapter1/Chapter1";
+import Chapter2 from "./components/Chapter2/Chapter2";
+import Chapter3 from "./components/Chapter3/Chapter3";
+import Chapter4 from "./components/Chapter4/Chapter4";
+import Footer from "./components/Footer/Footer";
+import useLenis from "./hooks/useLenis"; // ✅ Add this line
+
 
 function App() {
+  useLenis();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Home />
+      <Chapter1 />
+      <Chapter2 />
+      <Chapter3 />
+      <Chapter4 />
+      <Footer />
     </div>
   );
 }
